@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   // initial state 
   serverComponent = "No server component is being set !!!";
+  inputName = " ";
   
   constructor()
   {
@@ -23,5 +24,11 @@ export class ServersComponent implements OnInit {
   onServerComponentChange()
   {
     this.serverComponent = "A new component has being set !!!";
+  }
+  onGivingInput(event : Event)
+  {
+    // we won't log this, we'd display it 
+    // console.log(hulla);
+    this.inputName = (<HTMLInputElement>event.target).value;
   }
 }

@@ -1,6 +1,9 @@
 <h2>This is the explicit content of servers component</h2>
 <!-- it'll stay enabled, once relaod the page it'll stay disabled for 2 secs  -->
 <!-- property binding -->
+<!-- on completing the event it takes an input -->
+<input type="text" class="form-control" (input)="onGivingInput($event)">
+<p>{{inputName}}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerComponentChange()">Add servers</button>
 <p>{{serverComponent}}</p>
 <p>{{allowNewServer}}</p>
