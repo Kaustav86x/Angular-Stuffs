@@ -10,7 +10,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   // initial state 
   serverComponent = "No server component is being set !!!";
-  inputName = " ";
+  inputName = "hahaaha";
   
   constructor()
   {
@@ -23,7 +23,7 @@ export class ServersComponent implements OnInit {
   }
   onServerComponentChange()
   {
-    this.serverComponent = "A new component has being set !!!";
+    this.serverComponent = "A new component has being set !!! . The name is " + this.inputName;
   }
   onGivingInput(event : Event)
   {
