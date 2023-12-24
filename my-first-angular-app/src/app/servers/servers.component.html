@@ -6,7 +6,7 @@
 <!-- <input type="text" class="form-control" (input)="onGivingInput($event)"> -->
 <!-- both way binding (taking the data as input and displaying it, at the same time) -->
 <input type="text" class="form-control" [(ngModel)]="inputName">
-<p>{{inputName}}</p>
+<!-- <p>{{inputName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerComponentChange()">Add servers</button>
 <p>{{serverComponent}}</p>
 <p>{{allowNewServer}}</p>
