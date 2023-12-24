@@ -10,6 +10,13 @@ import { Component } from '@angular/core';
   }
   `]
 })
+// data binding 
 export class WarningAlertComponent {
+  warningCode : number = 108;
+  WarningMessg = "Be Alert !!!";
 
+  warningText()
+  {
+    return this.WarningMessg;
+  }
 }
