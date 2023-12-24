@@ -1,5 +1,9 @@
 <h2>This is the explicit content of servers component</h2>
-<button class="btn btn-primary" [disabled]=allowNewServer>Add servers</button>
+<!-- it'll stay enabled, once relaod the page it'll stay disabled for 2 secs  -->
+<!-- property binding -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerComponentChange()">Add servers</button>
+<p>{{serverComponent}}</p>
+<p>{{allowNewServer}}</p>
 <app-server></app-server>
 <app-server></app-server>
 

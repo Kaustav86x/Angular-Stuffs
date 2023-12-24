@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  // initial state 
+  serverComponent = "No server component is being set !!!";
   
   constructor()
   {
@@ -17,5 +19,9 @@ export class ServersComponent implements OnInit {
   }
   ngOnInit() {
       
+  }
+  onServerComponentChange()
+  {
+    this.serverComponent = "A new component has being set !!!";
   }
 }
