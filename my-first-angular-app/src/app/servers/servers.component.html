@@ -2,7 +2,10 @@
 <!-- it'll stay enabled, once relaod the page it'll stay disabled for 2 secs  -->
 <!-- property binding -->
 <!-- on completing the event it takes an input -->
+<!-- one way binding -->
 <input type="text" class="form-control" (input)="onGivingInput($event)">
+<!-- both way binding (taking the data as input and displaying it, at the same time) -->
+<input type="text" class="form-control" [(ngModel)]="inputName">
 <p>{{inputName}}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerComponentChange()">Add servers</button>
 <p>{{serverComponent}}</p>
