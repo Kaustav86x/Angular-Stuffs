@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: '[app-servers]',  // attribute
@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   templateUrl: './servers.component.html',
   styleUrl: './servers.component.css'
 })
-export class ServersComponent {
-
+export class ServersComponent implements OnInit {
+  allowNewServer = false;
+  
+  constructor()
+  {
+    setTimeout(()=> {
+      this.allowNewServer = true; 
+    }, 1000);
+  }
+  ngOnInit() {
+      
+  }
 }
