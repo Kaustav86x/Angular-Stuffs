@@ -1,8 +1,12 @@
 <!-- <h3>This is the server component being nested inside servers component</h3> -->
 <br>
-<input type="text" class="form-control" [(ngModel)]="username">
-<p>{{ username }}</p>
+<!-- <input type="text" class="form-control" [(ngModel)]="username"> -->
+<!-- <p>{{ username }}</p> -->
 <br>
 <!-- <p>{{output}}</p> -->
 <br>
-<button type="text" class="btn btn-primary" [disabled]="username === ''" (click)="OnGivivngUserNameInput()">Button</button>
+<!-- <button type="text" class="btn btn-primary" [disabled]="username === ''" (click)="OnGivivngUserNameInput()">Button</button> -->
+<!-- ngStyle is a directive to dynamically style -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">{{ serverId }} is set to {{ serverStatus }} is {{ getServerStatus() }}</p>
+<!-- when server status is online, the color of the text will be set to white -->
